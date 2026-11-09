@@ -1,0 +1,21 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Tooling
+.impeccable/config.local.json
+.impeccable/build/
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/critique/
+.DS_Store
+*.log
