@@ -22,7 +22,7 @@ export function EditorHeader() {
       <Link
         to="/"
         className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-        aria-label="Back to SaaS Builder home"
+        aria-label="Back to SaaS-UI home"
       >
         <Logo />
       </Link>

@@ -214,7 +214,7 @@ export function LandingPage() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <Helmet>
-        <title>SaaS Builder — Build something remarkable.</title>
+        <title>SaaS-UI — Build something remarkable.</title>
         <meta
           name="description"
           content="A local-first visual editor for design systems. Design, preview, and export tokens without an account."
@@ -233,7 +233,7 @@ export function LandingPage() {
           <Link
             to="/"
             className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            aria-label="SaaS Builder home"
+            aria-label="SaaS-UI home"
           >
             <Logo />
           </Link>

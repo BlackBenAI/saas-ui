@@ -5,7 +5,7 @@ NPM ?= npm --prefix frontend
 .DEFAULT_GOAL := help
 
 help: ## Show available targets
-	@awk 'BEGIN {FS = ":.*##"; printf "\nDesignBuilder\n\n"} /^[a-zA-Z0-9_-]+:.*##/ {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*##"; printf "\nSaaS-UI\n\n"} /^[a-zA-Z0-9_-]+:.*##/ {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@printf "\n"
 
 install: ## Install frontend dependencies

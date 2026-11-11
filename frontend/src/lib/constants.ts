@@ -1,11 +1,11 @@
-export const APP_NAME = "SaaS Builder";
+export const APP_NAME = "SaaS-UI";
 
 export const REPOSITORY_URL =
-  import.meta.env.VITE_REPOSITORY_URL ?? "https://github.com/BlackBenAI/DesignBuilder";
+  import.meta.env.VITE_REPOSITORY_URL ?? "https://github.com/BlackBenAI/saas-ui";
 
 export const STORAGE_KEYS = {
-  preferences: "saas-builder-preferences",
-  ui: "saas-builder-ui",
+  preferences: "saas-ui-preferences",
+  ui: "saas-ui-ui",
 } as const;
 
 export const PLANS = [

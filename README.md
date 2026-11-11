@@ -1,8 +1,8 @@
-# DesignBuilder
+# SaaS-UI
 
 > Build something remarkable. Your design system, beautifully consistent.
 
-DesignBuilder is a local-first visual design-system editor for developers and designers.
+SaaS-UI is a local-first visual design-system editor for developers and designers.
 It runs without an account and keeps your work in IndexedDB. The local-first editor is open
 source under MIT; optional cloud sync and team features are a separate proprietary service.
 
@@ -13,7 +13,7 @@ source under MIT; optional cloud sync and team features are a separate proprieta
 
 ## Why
 
-Design systems drift. DesignBuilder keeps colors, type, layout, components, effects, motion,
+Design systems drift. SaaS-UI keeps colors, type, layout, components, effects, motion,
 and assets in one precise, exportable source of truth. The local project is always the source
 of truth; the cloud is an explicit upgrade, never a gate.
 

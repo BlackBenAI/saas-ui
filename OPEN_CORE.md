@@ -1,6 +1,6 @@
 # Open-core boundary
 
-DesignBuilder is developed as an open-core product. This repository is the open-source
+SaaS-UI is developed as an open-core product. This repository is the open-source
 local-first editor. The hosted service is proprietary and lives in a separate private
 repository.
 

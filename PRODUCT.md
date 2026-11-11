@@ -23,7 +23,7 @@ React 18 + Vite 5 + TypeScript 5, Tailwind CSS 3, shadcn/ui, Zustand, Motion for
 
 ## Product Purpose
 
-SaaS Builder is a visual design-system editor that combines developer-grade precision with
+SaaS-UI is a visual design-system editor that combines developer-grade precision with
 the freedom of a creative tool. It lets a person define colors, typography, layout, components,
 effects, motion, and assets, then preview and export the system in real time. Success means a
 usable local editor with zero friction and a credible paid cloud path.
@@ -52,7 +52,7 @@ shown in the product are real product facts, not marketing filler.
 
 ## Brand Commitments
 
-Name: SaaS Builder. Voice: professional, precise, honest, concise; never superlative. Visual
+Name: SaaS-UI. Voice: professional, precise, honest, concise; never superlative. Visual
 identity is pinned by ARTISTIC_DIRECTION.md, GRAPHIC_CHARTER.md, DESIGN_SYSTEM.md, and
 MOTION_DESIGN.md: neutral zinc-dominant surfaces, restrained indigo accent, Manrope for display,
 Inter for UI, JetBrains Mono for technical values, Lucide icons only, no emoji as UI icons,

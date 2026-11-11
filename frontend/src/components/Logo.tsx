@@ -20,10 +20,10 @@ export function Logo({ className, wordmark = true }: LogoProps) {
       </svg>
       {wordmark ? (
         <span className="font-display text-[15px] font-semibold tracking-[-0.01em]">
-          SaaS Builder
+          SaaS-UI
         </span>
       ) : (
-        <span className="sr-only">SaaS Builder</span>
+        <span className="sr-only">SaaS-UI</span>
       )}
     </span>
   );

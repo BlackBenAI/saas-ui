@@ -34,10 +34,10 @@ export function EditorPage() {
   return (
     <>
       <Helmet>
-        <title>Editor · SaaS Builder</title>
+        <title>Editor · SaaS-UI</title>
         <meta
           name="description"
-          content="Edit your design system locally in SaaS Builder. No account required."
+          content="Edit your design system locally in SaaS-UI. No account required."
         />
       </Helmet>
       <EditorLayout />

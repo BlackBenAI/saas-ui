@@ -1,5 +1,5 @@
 ---
-name: SaaS Builder
+name: SaaS-UI
 description: A precise, local-first visual editor for design systems.
 colors:
   primary: "#6366F1"
@@ -89,13 +89,13 @@ components:
     height: "36px"
 ---
 
-# Design System: SaaS Builder
+# Design System: SaaS-UI
 
 ## Overview
 
 **Creative North Star: "The Instrument Panel"**
 
-SaaS Builder looks like a precision instrument, not a dashboard. Large fields of quiet zinc let
+SaaS-UI looks like a precision instrument, not a dashboard. Large fields of quiet zinc let
 the canvas lead; one indigo accent marks the action that matters. Type is editorial in the
 marketing surface and strictly functional inside the editor. Nothing moves without a reason,
 and every value that a developer might copy is set in monospace.

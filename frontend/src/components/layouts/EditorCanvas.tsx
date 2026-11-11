@@ -14,7 +14,7 @@ export function EditorCanvas() {
     >
       <EmptyState
         icon={LayoutDashboard}
-        title="Welcome to SaaS Builder"
+        title="Welcome to SaaS-UI"
         description="Start by selecting a module from the sidebar. This project is stored in your browser, not on a server."
       >
         <div className="inline-flex max-w-full items-center gap-2 rounded-md border bg-surface px-3 py-2 text-xs text-muted-foreground">
