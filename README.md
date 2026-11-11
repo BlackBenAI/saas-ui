@@ -76,6 +76,12 @@ decorative buttons in the product.
 
 ![SaaS-UI project restored after reload](docs/assets/editor-persisted.png)
 
+## Documentation
+
+- The canonical documentation lives in this repository: `README.md`, `PRODUCT.md`, `DESIGN.md`, and `OPEN_CORE.md`.
+- The wiki source lives in [`docs/wiki/`](docs/wiki/). Enable **Wikis** in the repository settings, create the first `Home` page, then run `bash docs/wiki/publish-wiki.sh`.
+- The wiki covers onboarding, architecture, local-first data, design principles, contributing, roadmap, FAQ, and security.
+
 ## Quick start
 
 Requires Node.js 20+ and npm.
