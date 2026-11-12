@@ -39,6 +39,7 @@ export function EditorPage() {
           name="description"
           content="Edit your design system locally in SaaS-UI. No account required."
         />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <EditorLayout />
     </>

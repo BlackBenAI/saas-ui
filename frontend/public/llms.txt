@@ -1,0 +1,32 @@
+# SaaS-UI
+
+> Local-first visual editor for design systems. MIT licensed, frontend-only, no account required.
+
+## What it is
+
+SaaS-UI is a local-first editor for design tokens: colors, typography, layout, components,
+effects, motion, assets, AI rules, and exports. Projects are stored in the browser with
+IndexedDB. The editor works offline and never requires the hosted cloud to start, edit, or
+export a local design system.
+
+## Source
+
+- [GitHub repository](https://github.com/BlackBenAI/saas-ui)
+- [Hosted edition](https://saasui.cloud)
+- License: MIT
+
+## Documentation
+
+- [README](https://github.com/BlackBenAI/saas-ui/blob/main/README.md)
+- [Product](https://github.com/BlackBenAI/saas-ui/blob/main/PRODUCT.md)
+- [Design system](https://github.com/BlackBenAI/saas-ui/blob/main/DESIGN.md)
+- [Open-core boundary](https://github.com/BlackBenAI/saas-ui/blob/main/OPEN_CORE.md)
+- [Wiki](https://github.com/BlackBenAI/saas-ui/wiki)
+
+## Key facts
+
+- React 18 + Vite 5 + TypeScript.
+- Zustand state, Dexie/IndexedDB persistence, 700 ms autosave.
+- Ten editor modules; Overview is implemented, the other modules are being completed.
+- No account, no API, no cloud dependency in the open-source build.
+- The hosted edition adds accounts, cloud sync, collaboration, billing, and administration.

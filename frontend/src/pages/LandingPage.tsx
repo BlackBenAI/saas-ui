@@ -214,11 +214,27 @@ export function LandingPage() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <Helmet>
-        <title>SaaS-UI — Build something remarkable.</title>
+        <title>SaaS-UI — Local-first design system editor</title>
         <meta
           name="description"
-          content="A local-first visual editor for design systems. Design, preview, and export tokens without an account."
+          content="A local-first visual editor for design systems. Design, preview, and export tokens without an account. MIT licensed."
         />
+        <link rel="canonical" href="https://saasui.cloud/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="SaaS-UI — Local-first design system editor" />
+        <meta
+          property="og:description"
+          content="Edit design tokens locally, preview them live, and export CSS, Tailwind, TypeScript, JSON, or Markdown. No account required."
+        />
+        <meta property="og:url" content="https://saasui.cloud/" />
+        <meta property="og:image" content="https://saasui.cloud/og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SaaS-UI — Local-first design system editor" />
+        <meta
+          name="twitter:description"
+          content="Edit design tokens locally, preview them live, and export CSS, Tailwind, TypeScript, JSON, or Markdown. No account required."
+        />
+        <meta name="twitter:image" content="https://saasui.cloud/og.png" />
       </Helmet>
 
       <a

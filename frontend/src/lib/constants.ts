@@ -1,5 +1,8 @@
 export const APP_NAME = "SaaS-UI";
 
+export const SITE_URL =
+  import.meta.env.VITE_SITE_URL ?? "https://saasui.cloud";
+
 export const REPOSITORY_URL =
   import.meta.env.VITE_REPOSITORY_URL ?? "https://github.com/BlackBenAI/saas-ui";
 
