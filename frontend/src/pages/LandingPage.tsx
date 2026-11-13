@@ -29,9 +29,8 @@ import { Logo } from "@/components/Logo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PLANS, REPOSITORY_URL } from "@/lib/constants";
+import { EASE, MOTION } from "@/lib/motion";
 import { useDesignSystemStore } from "@/stores/useDesignSystemStore";
-
-const EASE: [number, number, number, number] = [0.4, 0, 0.2, 1];
 
 const heroContainer: Variants = {
   hidden: {},
@@ -40,7 +39,7 @@ const heroContainer: Variants = {
 
 const heroItem: Variants = {
   hidden: { opacity: 0, y: 12 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE } },
+  visible: { opacity: 1, y: 0, transition: { duration: MOTION.panel.duration, ease: EASE } },
 };
 
 const FEATURES: Array<{ title: string; description: string; icon: LucideIcon }> = [
@@ -109,7 +108,7 @@ function Reveal({
       initial={reduceMotion ? false : { opacity: 0, y: 16 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.25, delay, ease: EASE }}
+      transition={{ duration: MOTION.panel.duration, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -352,7 +351,7 @@ export function LandingPage() {
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.15, ease: EASE }}
+            transition={{ duration: MOTION.modal.duration, delay: 0.15, ease: EASE }}
           >
             <PreviewCard />
           </motion.div>

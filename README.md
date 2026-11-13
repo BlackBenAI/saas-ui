@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="frontend/public/brand/saas-ui-symbol-192.png" width="56" height="56" alt="SaaS-UI logo" />
+</p>
+
 # SaaS-UI
 
 > A local-first visual editor for design systems. No account. No server. No lost work.
