@@ -31,4 +31,4 @@ body:
       label: Checks
       options:
         - label: I ran `npm run typecheck`, `npm run lint`, `npm run test -- --run`, and `npm run build`.
-        - label: This is not a security vulnerability (those go to security@blackbenai.bj).
+        - label: This is not a security vulnerability (those go to contact@blackbenai.com).

@@ -48,4 +48,4 @@ add fake metrics, testimonials, decorative controls, or emoji UI icons.
 ## Security
 
 Do not open public issues for vulnerabilities. Report them privately to
-`security@blackbenai.bj` as described in `SECURITY.md`.
+`contact@blackbenai.com` as described in `SECURITY.md`.

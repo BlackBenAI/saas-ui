@@ -4,7 +4,7 @@
 
 Do not open a public issue for a security vulnerability.
 
-Report it privately to `security@blackbenai.bj` with:
+Report it privately to `contact@blackbenai.com` with:
 
 - the affected version or commit;
 - a description of the issue and impact;

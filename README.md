@@ -243,7 +243,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, scope, and the PR checklist.
 ## Security
 
 Do not open public issues for vulnerabilities. Report them privately to
-`security@blackbenai.bj`.
+`contact@blackbenai.com`.
 
 ## License
 

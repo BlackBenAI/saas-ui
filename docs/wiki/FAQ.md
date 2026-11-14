@@ -97,4 +97,4 @@ checks, and keep the local-first contract intact.
 
 ## I found a security issue. Where do I report it?
 
-Privately to `security@blackbenai.bj`. Do not open a public issue. See [Security](Security).
+Privately to `contact@blackbenai.com`. Do not open a public issue. See [Security](Security).
