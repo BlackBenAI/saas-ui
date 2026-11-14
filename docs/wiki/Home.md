@@ -25,10 +25,10 @@ components, effects, and motion.
 
 The open-source build is an early, honest foundation:
 
-- The editor shell, project naming, undo/redo, panel collapse, and Overview are interactive.
+- The editor shell, project naming, undo/redo, panel collapse, and all ten modules are interactive.
 - IndexedDB autosave and reload persistence work without an account or API.
-- The other nine modules are scaffolded and visibly disabled in the sidebar.
-- Export formats and responsive editing are on the public roadmap.
+- CSS, Tailwind, TypeScript, JSON, and Markdown exports run locally in the browser.
+- The editor has a responsive shell with a mobile module bar.
 - Cloud sync, collaboration, billing, and community belong to the separate hosted service.
 
 There are no fake metrics, fake testimonials, decorative buttons, or cloud-only gates.

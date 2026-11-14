@@ -82,7 +82,7 @@ To reset local data:
 
 1. Open DevTools → Application → Storage.
 2. Clear site data for the app origin, or delete the `saas-ui` IndexedDB database.
-3. Reload `/editor`.
+3. Reload `/dashboard`.
 
 This is destructive. There is no server-side copy in the open-source build.
 
@@ -90,8 +90,9 @@ This is destructive. There is no server-side copy in the open-source build.
 
 - Private browsing modes may restrict or discard IndexedDB.
 - Two tabs editing the same project do not have cross-tab conflict resolution yet.
-- The editor is desktop-first; narrow-screen editing is on the roadmap.
-- Export and versioned backups are roadmap items, not current features.
+- Narrow-screen editing hides secondary panels behind the mobile module bar; complex token
+  editing is still more comfortable on a desktop browser.
+- Versioned backups are a roadmap item, not a current feature.
 
 ## Related
 

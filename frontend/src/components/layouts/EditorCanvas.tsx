@@ -1,17 +1,24 @@
 import { HardDrive, LayoutDashboard } from "lucide-react";
+import type { ReactNode } from "react";
+
+import { cn } from "@/lib/utils";
 
 import { EmptyState } from "@/components/EmptyState";
 import { useDesignSystemStore } from "@/stores/useDesignSystemStore";
 
-export function EditorCanvas() {
+export function EditorCanvas({ children }: { children?: ReactNode }) {
   const name = useDesignSystemStore((state) => state.designSystem.name);
 
   return (
     <main
       id="editor-canvas"
-      className="canvas-grid flex min-w-0 flex-1 items-center justify-center overflow-auto bg-background p-8"
+      className={cn(
+        "canvas-grid flex min-h-0 min-w-0 flex-1 overflow-auto bg-background",
+        children ? "items-stretch justify-start" : "items-center justify-center p-8",
+      )}
       aria-label="Editor canvas"
     >
+      {children ?? (
       <EmptyState
         icon={LayoutDashboard}
         title="Welcome to SaaS-UI"
@@ -24,6 +31,7 @@ export function EditorCanvas() {
           <span>IndexedDB</span>
         </div>
       </EmptyState>
+      )}
     </main>
   );
 }

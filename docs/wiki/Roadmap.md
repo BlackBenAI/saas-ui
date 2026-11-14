@@ -9,56 +9,40 @@ usable on its own.
 |---|---|
 | Editor shell | Available |
 | Project naming | Available |
+| Local project hub (`/projects`) | Available |
+| Automatic project creation | Available |
 | Undo/redo and local history | Available |
 | Sidebar and properties collapse | Available |
-| Overview module | Available |
+| All ten editor modules | Available |
 | IndexedDB autosave | Available |
 | Reload persistence | Available |
-| Other nine modules | Scaffolded, disabled |
-| Export formats | Next public milestone |
-| Responsive editing | Planned |
+| CSS, Tailwind, TypeScript, JSON, Markdown exports | Available |
+| Vite/Next starter handoff | Available |
+| Figma variables import/export | Available |
+| Responsive editor shell | Available |
 | Cloud, collaboration, billing | Separate hosted service |
+
+## Delivered
+
+- The ten editor modules edit the same store, participate in history, and persist locally.
+- Export generation reads the local design system and supports CSS custom properties, Tailwind,
+  TypeScript, JSON, and Markdown. No server is required.
+- AI Rules generates a complete `AI_INTERFACE_BRIEF.md` for coding agents.
+- Export generates Vite + React and Next.js + shadcn starters with a real page section and a live
+  preview.
+- Export and import Figma variables through a documented JSON file.
+- The shell adapts to narrow screens with a horizontal module bar and hidden secondary panels.
+- `/projects` lists local projects and supports create, open, duplicate, and delete. A project
+  is created automatically when none exists.
 
 ## Next milestones
 
-### 1. Remaining modules
+### 1. Extensibility
 
-Implement the module surfaces against the existing token model:
-
-- Colors
-- Typography
-- Layout
-- Components
-- Effects
-- Motion
-- Assets
-- AI Rules
-
-Each module should update the same store, participate in history, and persist locally.
-
-### 2. Export generation
-
-Add deterministic exports for:
-
-- CSS custom properties
-- Tailwind config
-- TypeScript tokens
-- JSON
-- Markdown design brief
-
-Exports must read from the local design system and must not require a server.
-
-### 3. Responsive editor
-
-The shell is desktop-first today. Improve narrow-screen behavior without hiding the local-first
-guarantees or breaking keyboard access.
-
-### 4. Quality and documentation
-
-- Add tests for every new interaction.
-- Keep screenshots and the demo video current.
-- Keep the README and wiki aligned with the actual build.
-- Add a contributor-friendly issue list.
+- Add a plugin API for modules and exporters.
+- Ship a component-level preview surface.
+- Add more framework starters and token importers.
+- Expand accessibility and keyboard-first coverage.
 
 ## Open-core boundary
 
@@ -74,7 +58,7 @@ The hosted service remains separate:
 
 - accounts, JWT/OAuth, MFA
 - organizations, RLS, audit
-- Stripe billing and webhooks
+- FedaPay billing and webhooks
 - cloud sync, collaboration, community
 - deployment, secrets, operations
 

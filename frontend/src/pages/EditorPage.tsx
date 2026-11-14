@@ -1,23 +1,47 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { useParams } from "react-router-dom";
 
 import { EditorLayout } from "@/components/layouts/EditorLayout";
 import { useAutosave } from "@/lib/autosave";
-import { db } from "@/lib/db";
-import { useDesignSystemStore } from "@/stores/useDesignSystemStore";
+import { ensureLocalProject, openLocalProject } from "@/lib/local-projects";
+import { ModuleRouter } from "@/pages/editor/EditorModules";
+import { useUIStore } from "@/stores/useUIStore";
+import type { ModuleId } from "@/types";
+
+const MODULE_IDS: ModuleId[] = [
+  "overview",
+  "colors",
+  "typography",
+  "layout",
+  "components",
+  "effects",
+  "motion",
+  "assets",
+  "ai-rules",
+  "export",
+];
 
 export function EditorPage() {
-  const loadFromCloud = useDesignSystemStore((state) => state.loadFromCloud);
+  const { module } = useParams();
+  const setActiveModule = useUIStore((state) => state.setActiveModule);
+  const activeModule = MODULE_IDS.includes(module as ModuleId)
+    ? (module as ModuleId)
+    : "overview";
   useAutosave();
+
+  useEffect(() => {
+    setActiveModule(activeModule);
+  }, [activeModule, setActiveModule]);
 
   useEffect(() => {
     let cancelled = false;
 
     async function loadLocalProject() {
       try {
-        const latest = await db.projects.orderBy("updatedAt").last();
-        if (latest && !cancelled) {
-          loadFromCloud(latest.designSystem);
+        const record = await ensureLocalProject();
+        if (!cancelled) {
+          openLocalProject(record);
         }
       } catch {
         // IndexedDB may be unavailable (private mode). The editor still works in memory.
@@ -29,7 +53,7 @@ export function EditorPage() {
     return () => {
       cancelled = true;
     };
-  }, [loadFromCloud]);
+  }, []);
 
   return (
     <>
@@ -41,7 +65,9 @@ export function EditorPage() {
         />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <EditorLayout />
+      <EditorLayout>
+        <ModuleRouter module={activeModule} />
+      </EditorLayout>
     </>
   );
 }

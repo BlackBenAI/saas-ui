@@ -13,7 +13,7 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-18181B)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-BlackBenAI%2Fsaas--ui-18181B?logo=github)](https://github.com/BlackBenAI/saas-ui)
 
-[![Watch the 33-second demo](docs/assets/landing.png)](docs/assets/saas-ui-demo.webm)
+[![Watch the short demo](docs/assets/landing.png)](docs/assets/saas-ui-demo.webm)
 
 SaaS-UI is the MIT-licensed, local-first editor for design tokens. It runs entirely in your
 browser, stores projects in IndexedDB, and never asks for an account. The design system is the
@@ -25,7 +25,7 @@ administrative layers on top of the same local editor.
 
 ## Demo
 
-- **[Watch the 33-second product demo](docs/assets/saas-ui-demo.webm)** — a real local session:
+- **[Watch the short product demo](docs/assets/saas-ui-demo.webm)** — a real local session:
   open the editor, rename the project, collapse panels, undo/redo, reload, and recover the work.
 - [Landing page](docs/assets/landing.png)
 - [Editor shell](docs/assets/editor-overview.png)
@@ -37,12 +37,11 @@ mockups. Regenerate them with `npm run capture:demo` while the dev server is run
 ## Why SaaS-UI
 
 - **Local first** — IndexedDB autosave with no account, API, or network dependency.
-- **Exact values** — the same token model feeds the UI, preview, and future exports.
+- **Exact values** — the same token model feeds the UI, preview, and exports.
 - **Creative engineering** — Linear/Figma/Raycast-grade precision, restrained motion, no
   dashboard clutter.
 - **Open source** — MIT-licensed editor, transparent core, and a public roadmap.
-- **Honest scope** — the shell and Overview are interactive today; the remaining modules and
-  export formats are being implemented in public.
+- **Honest scope** — all ten modules and five export formats work locally in this build.
 
 ## Current status
 
@@ -50,25 +49,37 @@ mockups. Regenerate them with `npm run capture:demo` while the dev server is run
 |---|---|
 | Local editor shell | Available |
 | Project name, undo/redo, panel collapse | Available |
+| Local project hub, create/open/duplicate/delete | Available |
+| Automatic project creation when none exists | Available |
 | IndexedDB autosave and reload persistence | Available |
 | Overview module | Available |
-| Colors, Typography, Layout, Components, Effects, Motion, Assets, AI Rules, Export | Scaffolded; disabled in this build |
-| CSS, Tailwind, TypeScript, JSON, Markdown exports | Next public milestone |
+| Colors, Typography, Layout, Components, Effects, Motion, Assets, AI Rules, Export | Available |
+| CSS, Tailwind, TypeScript, JSON, Markdown exports | Available |
+| Figma variables export and import | Available |
+| Vite + Next.js/shadcn starter handoff | Available |
+| Responsive editor shell | Available |
 | Accounts, cloud sync, collaboration, billing, community | Proprietary hosted service, maintained separately |
 
-The disabled modules are visible in the sidebar on purpose: they show the target shape of the
-editor without pretending they are finished. There are no fake metrics, fake testimonials, or
-decorative buttons in the product.
+Every module edits the same local design system. Exports are generated in the browser and never
+require an account, API, or server. There are no fake metrics, fake testimonials, or decorative
+buttons in the product.
 
 ## What works today
 
-- Open `/editor` with no account and no API.
+- Open `/dashboard` with no account and no API; it is the hub for all editor modules.
+- `/projects` lists local projects and lets you create, open, duplicate, or delete them. A
+  project is created automatically when none exists.
 - Rename the project; the value is saved locally and survives a reload.
+- Edit colors, typography, layout, components, effects, motion, assets, and AI rules.
 - Collapse and expand the module sidebar and the properties panel.
 - Undo and redo changes with a 50-entry local history.
 - See autosave status in the footer: saving, saved locally, unsaved, or error.
-- Inspect the project name, storage backend, and cloud state in the properties panel.
-- Use the editor shell at desktop widths; responsive editing is on the roadmap.
+- Export CSS variables, Tailwind, TypeScript, JSON, and Markdown from the browser.
+- Download a complete `AI_INTERFACE_BRIEF.md` from the AI Rules module for coding agents.
+- Generate a Vite + React or Next.js + shadcn starter with a real token-driven page from Export.
+- Preview the generated starter live, download it as files or a Markdown bundle, and round-trip the tokens through a Figma variables JSON file.
+- On narrow screens, use the horizontal module bar; side panels collapse out of the way.
+- Inspect the project name, storage backend, contrast, and cloud state in the properties panel.
 
 ## Screenshots
 
@@ -152,7 +163,7 @@ Browser
 
 The local flow:
 
-1. `/editor` hydrates the Zustand store from localStorage.
+1. `/dashboard` hydrates the Zustand store from localStorage.
 2. `EditorPage` loads the most recently updated project from IndexedDB.
 3. Every edit updates the store immediately and marks the project unsaved.
 4. `useAutosave` writes the project to IndexedDB after a 700 ms debounce.
@@ -182,8 +193,9 @@ npm run test -- --run
 npm run build
 ```
 
-The Vitest suite covers the landing page and the IndexedDB persistence layer. The build runs
-TypeScript in strict mode before Vite produces the production bundle.
+The Vitest suite covers the landing page, all ten editor modules, project management, exports,
+handoff starters, Figma round-trips, AI brief generation, and IndexedDB persistence. The build
+runs TypeScript in strict mode before Vite produces the production bundle.
 
 ## Open-core boundary
 
@@ -198,7 +210,7 @@ The hosted service is separate and proprietary:
 
 - Accounts, JWT/OAuth, sessions, and MFA.
 - Organizations, PostgreSQL row-level security, and audit logging.
-- Stripe subscriptions, billing, invoices, and webhooks.
+- FedaPay subscriptions, billing, invoices, and webhooks.
 - Cloud sync, shared projects, real-time collaboration, and version history.
 - Community publishing, moderation, and administrative operations.
 - Production deployment, infrastructure, secrets, and operational tooling.
@@ -207,11 +219,11 @@ See [OPEN_CORE.md](OPEN_CORE.md) for the contract.
 
 ## Roadmap
 
-1. Finish the remaining editor modules on the local token model.
-2. Add CSS, Tailwind, TypeScript, JSON, and Markdown export generation.
-3. Improve the editor shell for narrow screens and keyboard-first workflows.
-4. Add the public demo assets and contributor guide.
-5. Keep the cloud, collaboration, and billing layers in the separate hosted service.
+1. Add a plugin API for custom modules and exporters.
+2. Ship a component-level preview and documentation surface.
+3. Expand accessibility and keyboard-first editing coverage.
+4. Add more framework starters and token importers.
+5. Keep the cloud, collaboration, billing, and marketplace layers in the separate hosted service.
 
 The roadmap is intentionally public and incremental. The open-source editor must stay useful at
 every step, not only after the hosted edition is connected.

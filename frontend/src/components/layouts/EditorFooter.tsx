@@ -55,14 +55,17 @@ export function EditorFooter() {
     <footer className="flex h-8 shrink-0 items-center justify-between border-t bg-background px-3 text-[11px] text-muted-foreground">
       <div className="flex items-center gap-3">
         <SaveIndicator />
-        <span aria-hidden="true" className="h-3 w-px bg-border" />
-        <span className="inline-flex items-center gap-1.5" title="Cloud sync is opt-in.">
+        <span aria-hidden="true" className="hidden h-3 w-px bg-border sm:block" />
+        <span
+          className="hidden items-center gap-1.5 sm:inline-flex"
+          title="Cloud sync is opt-in."
+        >
           <Lock className="h-3 w-3" aria-hidden="true" />
           Cloud sync off
         </span>
       </div>
       <div className="flex items-center gap-3">
-        <span>Local-first</span>
+        <span className="hidden sm:inline">Local-first</span>
         <span className="font-mono">v0.1.0</span>
       </div>
     </footer>

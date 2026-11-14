@@ -87,8 +87,8 @@ const MODULES: Array<{ name: string; description: string; icon: LucideIcon }> = 
   { name: "Effects", description: "Borders, shadows, depth", icon: Sparkles },
   { name: "Motion", description: "Durations, easing, choreography", icon: Waypoints },
   { name: "Assets", description: "Logos, icons, and imagery", icon: ImageIcon },
-  { name: "AI Rules", description: "Constraints for generated UI", icon: Bot },
-  { name: "Export", description: "CSS, Tailwind, TypeScript, JSON", icon: FileCode2 },
+  { name: "AI Rules", description: "Full AI brief + UI constraints", icon: Bot },
+  { name: "Export", description: "Tokens + Vite/Next starters", icon: FileCode2 },
 ];
 
 function Reveal({
@@ -282,7 +282,7 @@ export function LandingPage() {
               </a>
             </Button>
             <Button size="sm" asChild>
-              <Link to="/editor">
+              <Link to="/dashboard">
                 Open editor
                 <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
               </Link>
@@ -322,7 +322,7 @@ export function LandingPage() {
 
             <motion.div variants={heroItem} className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" asChild>
-                <Link to="/editor">
+                <Link to="/dashboard">
                   Open editor
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
@@ -413,7 +413,7 @@ export function LandingPage() {
                 everywhere, then export code that matches the canvas.
               </p>
               <Button variant="outline" asChild className="mt-6">
-                <Link to="/editor">
+                <Link to="/dashboard">
                   Try the editor
                   <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                 </Link>
@@ -537,7 +537,7 @@ export function LandingPage() {
                     <div className="mt-6 pt-0">
                       {plan.action === "editor" ? (
                         <Button asChild className="w-full">
-                          <Link to="/editor">{plan.cta}</Link>
+                          <Link to="/dashboard">{plan.cta}</Link>
                         </Button>
                       ) : (
                         <Button
@@ -578,7 +578,7 @@ export function LandingPage() {
               <h2 className="text-xs font-medium text-[#FAFAF9]">Product</h2>
               <ul className="mt-3 space-y-2 text-sm text-[#A1A1AA]">
                 <li>
-                  <Link to="/editor" className="transition-colors duration-120 hover:text-[#FAFAF9]">
+                  <Link to="/dashboard" className="transition-colors duration-120 hover:text-[#FAFAF9]">
                     Editor
                   </Link>
                 </li>

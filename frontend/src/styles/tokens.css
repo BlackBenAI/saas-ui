@@ -6,7 +6,7 @@
   --surface: #ffffff;
   --foreground: #18181b;
   --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted-foreground: #6b6b73;
   --border: #e4e4e7;
   --border-strong: #d4d4d8;
 
@@ -20,7 +20,7 @@
   --secondary-foreground: #18181b;
   --ring: #6366f1;
 
-  --success: #16a34a;
+  --success: #15803d;
   --success-soft: #dcfce7;
   --warning: #ea580c;
   --destructive: #dc2626;

@@ -2,12 +2,11 @@ import { EditorCanvas } from "@/components/layouts/EditorCanvas";
 import { EditorFooter } from "@/components/layouts/EditorFooter";
 import { EditorHeader } from "@/components/layouts/EditorHeader";
 import { EditorSidebar } from "@/components/layouts/EditorSidebar";
+import { MobileModuleBar } from "@/components/layouts/MobileModuleBar";
 import { PropertiesPanel } from "@/components/layouts/PropertiesPanel";
-import { useDesignSystemStore } from "@/stores/useDesignSystemStore";
+import type { ReactNode } from "react";
 
-export function EditorLayout() {
-  const name = useDesignSystemStore((state) => state.designSystem.name);
-
+export function EditorLayout({ children }: { children?: ReactNode }) {
   return (
     <div className="flex h-dvh flex-col overflow-hidden bg-background text-foreground">
       <a
@@ -16,11 +15,11 @@ export function EditorLayout() {
       >
         Skip to canvas
       </a>
-      <h1 className="sr-only">Editor — {name}</h1>
       <EditorHeader />
+      <MobileModuleBar />
       <div className="flex min-h-0 flex-1">
         <EditorSidebar />
-        <EditorCanvas />
+        <EditorCanvas>{children}</EditorCanvas>
         <PropertiesPanel />
       </div>
       <EditorFooter />

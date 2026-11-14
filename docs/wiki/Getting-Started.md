@@ -20,7 +20,7 @@ npm run dev
 
 Open `http://localhost:5173`.
 
-The editor is available at `http://localhost:5173/editor`.
+The editor is available at `http://localhost:5173/dashboard`.
 
 ## Run with Docker
 
@@ -38,16 +38,18 @@ FRONTEND_PORT=3010 docker compose up --build
 
 ## First session
 
-1. Open `/editor`.
-2. Click the project name in the header and rename it.
-3. Wait for the footer to read **Saved locally**.
-4. Reload the page. The project name and design system are restored from IndexedDB.
-5. Use the sidebar and properties buttons to collapse and expand the panels.
-6. Use undo and redo in the header to move through the local history.
+1. Open `/dashboard`. A local project is created automatically if none exists.
+2. Open `/projects` to create, duplicate, or delete projects.
+3. Click the project name in the header and rename it.
+4. Wait for the footer to read **Saved locally**.
+5. Reload the page. The project name and design system are restored from IndexedDB.
+6. Use the sidebar and properties buttons to collapse and expand the panels.
+7. Use undo and redo in the header to move through the local history.
 
-The Overview module is the only interactive module in this build. The other modules are visible
-in the sidebar but disabled until their implementation lands. This is intentional and tracked in
-the [Roadmap](Roadmap).
+All ten modules are interactive: Overview, Colors, Typography, Layout, Components, Effects,
+Motion, Assets, AI Rules, and Export. Export any direction as CSS, Tailwind, TypeScript, JSON,
+or Markdown. Export also builds Vite + React and Next.js + shadcn starters and a Figma variables
+JSON file. See the [Roadmap](Roadmap) for what comes next.
 
 ## Commands
 

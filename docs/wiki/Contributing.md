@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173/editor`.
+Open `http://localhost:5173/dashboard`.
 
 ## Checks before opening a pull request
 
@@ -79,7 +79,7 @@ This repository does not accept:
 
 - accounts, JWT/OAuth, or sessions;
 - organizations, RLS, or audit logging;
-- Stripe billing or subscription management;
+- FedaPay billing or subscription management;
 - cloud sync, collaboration, or community publishing;
 - production deployment, secrets, or operational tooling.
 

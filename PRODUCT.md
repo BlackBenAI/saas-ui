@@ -44,7 +44,7 @@ shown in the product are real product facts, not marketing filler.
 - Ten editor modules: Overview, Colors, Typography, Layout, Components, Effects, Motion,
   Assets, AI Rules, Export.
 - Local persistence in IndexedDB with debounced autosave; UI preferences in LocalStorage.
-- Optional cloud: authentication, projects, Stripe tiers (Free/Team/Pro), collaboration.
+- Optional cloud: authentication, projects, FedaPay tiers (Free/Team/Pro), collaboration.
 - The hosted cloud, its multi-tenant RLS, billing, and deployment are proprietary and are not
   part of this repository. The open-source editor has no dependency on them.
 - UI language is English. Code and identifiers are English.

@@ -7,7 +7,7 @@ SaaS-UI is a browser-only React application. There is no backend in this reposit
 ```text
 Browser
   React 18 + Vite + TypeScript
-  ├─ React Router          / and /editor
+  ├─ React Router          / and /dashboard/*
   ├─ Zustand               design system, history, save status
   ├─ localStorage          fast hydration for preferences and current system
   ├─ Dexie / IndexedDB     durable local project records
@@ -23,7 +23,7 @@ frontend/
     components/
       layouts/             editor header, sidebar, canvas, properties, footer
       ui/                  shared primitives (button, input, badge, card...)
-    pages/                 LandingPage, EditorPage
+    pages/                 LandingPage, EditorPage, ProjectsPage
     stores/                useDesignSystemStore, useUIStore
     lib/                   autosave, Dexie database, constants, utilities
     styles/                design tokens and global CSS
@@ -38,7 +38,10 @@ frontend/
 | Route | Page | Purpose |
 |---|---|---|
 | `/` | `LandingPage` | Product overview and editor entry point |
-| `/editor` | `EditorPage` | Local-first editor shell |
+| `/dashboard` | `EditorPage` | Local-first editor hub and shell |
+| `/dashboard/:module` | `EditorPage` | Editor module inside the shared shell |
+| `/projects` | `ProjectsPage` | Local project hub: create/open/duplicate/delete |
+| `/editor`, `/editor/*` | redirect | Legacy aliases for `/dashboard` |
 | `*` | `LandingPage` | Fallback |
 
 The router is intentionally small. The editor is the product; the landing page is the front door.
@@ -58,10 +61,10 @@ There are two local layers:
 
 1. **localStorage** — synchronous hydration for fast startup.
 2. **IndexedDB via Dexie** — durable project records and the source used to restore the latest
-   project on `/editor`.
+   project on `/dashboard`.
 
-The IndexedDB database is named `saas-ui` and currently contains one `projects` table. The
-project record shape is defined in
+The IndexedDB database is named `saas-ui` and contains `projects`, `assets`, and `fonts`
+tables. The project record shape is defined in
 [`frontend/src/lib/db.ts`](https://github.com/BlackBenAI/saas-ui/blob/main/frontend/src/lib/db.ts).
 
 ## Autosave flow
@@ -72,7 +75,8 @@ project record shape is defined in
 4. The project is written to IndexedDB.
 5. The footer changes to **Saved locally**.
 
-A reload reads the most recently updated IndexedDB project and hydrates the store. A failed
+A reload reads the active project (or the most recently updated one) from IndexedDB and
+hydrates the store. If no project exists, `ensureLocalProject()` creates one automatically. A failed
 IndexedDB write sets the footer to **Save failed** without discarding the in-memory state.
 
 ## Editor shell
@@ -85,8 +89,9 @@ The desktop shell follows the visual contract in `DESIGN.md`:
 - 300 px collapsible properties panel
 - 32 px footer
 
-The shell is intentionally desktop-first today. Responsive behavior is on the
-[Roadmap](Roadmap).
+On narrow screens the shell replaces the sidebar with a horizontal module bar and hides the
+properties panel so the canvas keeps the available width. Desktop keeps the full three-panel
+layout.
 
 ## Extension points
 
@@ -108,9 +113,9 @@ The shell is intentionally desktop-first today. Responsive behavior is on the
 
 ### Add an export format
 
-Export generation is a public roadmap item. The token model is already the single source of
-truth; an exporter should read from `useDesignSystemStore` and produce deterministic output.
-Avoid adding a network request or a server dependency.
+Export generation reads from `useDesignSystemStore` and produces deterministic output. Handoff
+starters and Figma variables live in `src/lib/handoff.ts` and `src/lib/figma.ts`; keep them pure
+and avoid adding a network request or a server dependency.
 
 ## Build and verification
 

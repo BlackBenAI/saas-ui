@@ -30,18 +30,37 @@ production build can be served as a static site. See [Getting Started](Getting-S
 
 ## Can I export CSS, Tailwind, or TypeScript?
 
-Not in the current open-source build. Export generation is the next public milestone in the
-[Roadmap](Roadmap). The token model is already in place.
+Yes. The Export module generates CSS variables, a Tailwind config, typed TypeScript tokens, a
+re-importable JSON file, and a Markdown design brief. Everything runs in the browser.
 
-## Why are Colors, Typography, Layout, and the other modules disabled?
+## Can I use the tokens in Figma?
 
-Because they are not implemented yet. The sidebar shows the target shape of the editor without
-pretending the modules are finished. The Overview module is interactive today.
+Yes. Export generates a `figma-variables.json` file with color collections in light and dark
+modes, typography, spacing, radius, button tokens, durations, and easings. Import the same file
+after editing it in Figma to update the local tokens.
+
+## Are the Colors, Typography, Layout, and other modules available?
+
+Yes. All ten modules edit the same local design system and persist to IndexedDB.
+
+## Can I hand the design system to an AI coding agent?
+
+Yes. The AI Rules module generates a complete `AI_INTERFACE_BRIEF.md` with the mission, both
+palettes, every type role, layout, components, effects, motion, accessibility, QA, interface
+composition rules, and a definition of done. It also includes a short system prompt and the full
+reference CSS. Everything is generated locally from the current tokens.
+
+## Can I generate a starter app?
+
+Yes. Export includes a **Vite + React** and a **Next.js + shadcn** starter. Each includes a real
+token-driven page, the design tokens CSS, a generated Button component, Tailwind config, and a
+README. Copy individual files or download the whole starter as one Markdown bundle.
 
 ## Does it work on mobile?
 
-The editor shell is desktop-first today. Responsive editing is planned. The landing page is
-responsive; the editor is best used on a desktop browser for now.
+Yes. The landing page is responsive, and the editor replaces the sidebar with a horizontal
+module bar while hiding the secondary properties panel. Complex token editing is still more
+comfortable on a desktop browser.
 
 ## How do I reset my local data?
 

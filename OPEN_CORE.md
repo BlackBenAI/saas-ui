@@ -19,7 +19,7 @@ The following capabilities are not part of this repository and are not licensed 
 
 - Accounts, JWT/OAuth authentication, and session management.
 - Organizations, PostgreSQL row-level security, and audit logging.
-- Stripe subscriptions, billing, invoices, and webhooks.
+- FedaPay subscriptions, billing, invoices, and webhooks.
 - Cloud sync, shared projects, real-time collaboration, and version history.
 - Community publishing/moderation and admin operations.
 - Production deployment, infrastructure, secrets, and operational tooling.

@@ -24,7 +24,7 @@ describe("LandingPage", () => {
     ).toBeInTheDocument();
 
     const editorLinks = screen.getAllByRole("link", { name: /open editor/i });
-    expect(editorLinks[0]).toHaveAttribute("href", "/editor");
+    expect(editorLinks[0]).toHaveAttribute("href", "/dashboard");
   });
 
   it("renders the three pricing tiers with their real prices", () => {
