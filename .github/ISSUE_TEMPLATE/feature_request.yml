@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a local-first editor, project, export, or accessibility improvement.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: What is hard today, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Local-first / open-core impact
+      description: Does this require a backend or hosted service? Read OPEN_CORE.md.
+    validations:
+      required: true
