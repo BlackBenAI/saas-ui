@@ -230,6 +230,8 @@ every step, not only after the hosted edition is connected.
 
 ## Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, scope, and the PR checklist.
+
 - Keep the local editor independent of the hosted service.
 - Do not add fake metrics, fake testimonials, decorative buttons, emoji UI icons, or cloud-only
   gates.
