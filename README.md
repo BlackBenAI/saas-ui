@@ -25,7 +25,7 @@ administrative layers on top of the same local editor.
 
 ## Demo
 
-<video src="https://raw.githubusercontent.com/BlackBenAI/saas-ui/main/docs/assets/demo-editor.mp4" poster="https://raw.githubusercontent.com/BlackBenAI/saas-ui/main/docs/assets/demo-editor-poster.jpg" controls muted loop playsinline width="100%"></video>
+[![Watch the 60-second local editor demo](docs/assets/demo-editor-poster.jpg)](docs/assets/demo-editor.mp4)
 
 **[Watch the 60-second local editor demo](docs/assets/demo-editor.mp4)** — edit the palette and typography, inspect the live preview, then generate the agent prompt. No landing page, no mockup.
 
