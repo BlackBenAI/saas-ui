@@ -30,6 +30,14 @@ npm run build
 CI runs the same checks. Keep UI copy and identifiers in English, follow `DESIGN.md`, and do not
 add fake metrics, testimonials, decorative controls, or emoji UI icons.
 
+## Documentation languages
+
+English is the source language for the open-source docs. Follow [`docs/I18N.md`](docs/I18N.md):
+when a localized docs tree exists, update the English, French, and Spanish pages in the same
+change, and never leave a half-translated page. Do not machine-translate legal text. The hosted
+edition (`saas-uiBBA/`) treats every new user-facing string as translatable in English, French,
+and Spanish; follow its `AGENTS.md` and key-parity test.
+
 ## Good first contributions
 
 - Documentation and wiki corrections.

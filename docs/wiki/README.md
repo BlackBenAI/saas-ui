@@ -2,6 +2,11 @@
 
 This directory contains the source for the SaaS-UI GitHub wiki.
 
+> **Language:** the wiki is English-only for now. GitHub Wikis have no native language
+> selector, so translated suffix pages are not maintained here. The multilingual docs site lives
+> in [`../site/`](../site/) and exposes `/`, `/fr/`, and `/es/`. See [`../I18N.md`](../I18N.md)
+> before adding translated pages.
+
 ## Publish
 
 1. Enable **Wikis** in the repository settings.

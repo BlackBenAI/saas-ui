@@ -1,6 +1,7 @@
 COMPOSE ?= docker compose
 FRONTEND ?= $(COMPOSE) exec -T frontend
 NPM ?= npm --prefix frontend
+DOCS_NPM ?= npm --prefix docs/site
 
 .DEFAULT_GOAL := help
 
@@ -47,4 +48,16 @@ lint-fix: ## Auto-fix frontend lint issues
 typecheck: ## Type-check the frontend
 	$(NPM) run typecheck
 
-.PHONY: help install dev build preview up down logs ps frontend-shell test lint lint-fix typecheck
+docs-install: ## Install documentation site dependencies
+	$(DOCS_NPM) install
+
+docs-dev: ## Start the documentation site locally
+	$(DOCS_NPM) run docs:dev
+
+docs-build: ## Build the documentation site
+	$(DOCS_NPM) run docs:build
+
+docs-preview: ## Preview the documentation site build
+	$(DOCS_NPM) run docs:preview
+
+.PHONY: help install dev build preview up down logs ps frontend-shell test lint lint-fix typecheck docs-install docs-dev docs-build docs-preview

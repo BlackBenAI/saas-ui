@@ -96,6 +96,8 @@ buttons in the product.
 - The canonical documentation lives in this repository: `README.md`, `PRODUCT.md`, `DESIGN.md`, and `OPEN_CORE.md`.
 - The wiki source lives in [`docs/wiki/`](docs/wiki/). Enable **Wikis** in the repository settings, create the first `Home` page, then run `bash docs/wiki/publish-wiki.sh`.
 - The wiki covers onboarding, architecture, local-first data, design principles, contributing, roadmap, FAQ, and security.
+- Documentation language rules live in [`docs/I18N.md`](docs/I18N.md). English is the source; French and Spanish pages must be added in the same change once a localized docs tree exists. GitHub Wikis have no native language selector, so the localized docs site is the target for a real language choice.
+- The docs site lives in [`docs/site/`](docs/site/). Run `make docs-install`, then `make docs-dev`; build with `make docs-build`. It exposes `/`, `/fr/`, and `/es/` with a language selector. Set `DOCS_BASE=/saas-ui/` when deploying to a GitHub Pages project site.
 
 ## Quick start
 
