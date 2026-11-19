@@ -25,9 +25,9 @@ administrative layers on top of the same local editor.
 
 ## Demo
 
-[![Watch the 60-second local editor demo](docs/assets/demo-editor-poster.jpg)](docs/assets/demo-editor.mp4)
+[![Watch the local editor demo](docs/assets/demo-editor.gif)](docs/assets/demo-editor.mp4)
 
-**[Watch the 60-second local editor demo](docs/assets/demo-editor.mp4)** — edit the palette and typography, inspect the live preview, then generate the agent prompt. No landing page, no mockup.
+**[Watch the full local editor demo](docs/assets/demo-editor.mp4)** — edit the palette and typography, inspect the live preview, then generate the agent prompt. No landing page, no mockup.
 
 - **[Watch the existing walkthrough](docs/assets/saas-ui-demo.webm)** — a real local session:
   open the editor, rename the project, collapse panels, undo/redo, reload, and recover the work.
