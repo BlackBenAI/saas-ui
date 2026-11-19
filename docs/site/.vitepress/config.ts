@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 const github = "https://github.com/BlackBenAI/saas-ui";
+const discord = "https://discord.gg/GMtNYDevE";
 
 export default defineConfig({
   title: "SaaS-UI",
@@ -16,7 +17,10 @@ export default defineConfig({
   },
   themeConfig: {
     logo: "/logo.svg",
-    socialLinks: [{ icon: "github", link: github }],
+    socialLinks: [
+      { icon: "github", link: github },
+      { icon: "discord", link: discord },
+    ],
     search: { provider: "local" },
     locales: {
       root: {
@@ -25,6 +29,7 @@ export default defineConfig({
         nav: [
           { text: "Guide", link: "/guide/getting-started" },
           { text: "Reference", link: "/guide/architecture" },
+          { text: "Discord", link: discord },
           { text: "GitHub", link: github },
         ],
         sidebar: {
@@ -46,6 +51,7 @@ export default defineConfig({
                 { text: "Roadmap", link: "/guide/roadmap" },
                 { text: "FAQ", link: "/guide/faq" },
                 { text: "Security", link: "/guide/security" },
+                { text: "Discord community", link: discord },
               ],
             },
           ],
@@ -61,6 +67,8 @@ export default defineConfig({
         nav: [
           { text: "Guide", link: "/fr/guide/getting-started" },
           { text: "Référence (EN)", link: "/guide/architecture" },
+          { text: "Discord", link: discord },
+          { text: "Discord", link: discord },
           { text: "GitHub", link: github },
         ],
         sidebar: {
@@ -82,6 +90,7 @@ export default defineConfig({
                 { text: "Feuille de route (EN)", link: "/guide/roadmap" },
                 { text: "FAQ (EN)", link: "/guide/faq" },
                 { text: "Sécurité (EN)", link: "/guide/security" },
+                { text: "Communauté Discord", link: discord },
               ],
             },
           ],
@@ -96,6 +105,8 @@ export default defineConfig({
         nav: [
           { text: "Guía", link: "/es/guide/getting-started" },
           { text: "Referencia (EN)", link: "/guide/architecture" },
+          { text: "Discord", link: discord },
+          { text: "Discord", link: discord },
           { text: "GitHub", link: github },
         ],
         sidebar: {
@@ -117,6 +128,7 @@ export default defineConfig({
                 { text: "Hoja de ruta (EN)", link: "/guide/roadmap" },
                 { text: "FAQ (EN)", link: "/guide/faq" },
                 { text: "Seguridad (EN)", link: "/guide/security" },
+                { text: "Comunidad Discord", link: discord },
               ],
             },
           ],

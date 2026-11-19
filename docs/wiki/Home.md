@@ -63,6 +63,7 @@ Open `http://localhost:3000`. Set `FRONTEND_PORT` to use another host port.
 - [README](https://github.com/BlackBenAI/saas-ui/blob/main/README.md)
 - [Open-core boundary](https://github.com/BlackBenAI/saas-ui/blob/main/OPEN_CORE.md)
 - [Issues](https://github.com/BlackBenAI/saas-ui/issues)
+- [Discord community](https://discord.gg/GMtNYDevE)
 
 The canonical documentation lives in the repository. This wiki is the onboarding and
 community-facing companion to it.

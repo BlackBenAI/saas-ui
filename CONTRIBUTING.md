@@ -18,6 +18,8 @@ npm run dev
 
 Open `http://localhost:5173/dashboard`. A local project is created automatically.
 
+Questions before opening a PR? Ask in the [SaaS-UI Discord](https://discord.gg/GMtNYDevE). Decisions and bug reports still belong in GitHub issues.
+
 ## Before opening a PR
 
 ```bash

@@ -12,6 +12,7 @@
 [![Node](https://img.shields.io/badge/Node-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![License MIT](https://img.shields.io/badge/license-MIT-18181B)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-BlackBenAI%2Fsaas--ui-18181B?logo=github)](https://github.com/BlackBenAI/saas-ui)
+[![Discord](https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/GMtNYDevE)
 
 [![Watch the short demo](docs/assets/landing.png)](docs/assets/saas-ui-demo.webm)
 
@@ -233,6 +234,10 @@ See [OPEN_CORE.md](OPEN_CORE.md) for the contract.
 
 The roadmap is intentionally public and incremental. The open-source editor must stay useful at
 every step, not only after the hosted edition is connected.
+
+## Community
+
+Questions, ideas, and release notes: **[join the SaaS-UI Discord](https://discord.gg/GMtNYDevE)**. Bugs and product decisions stay in GitHub issues so they remain searchable.
 
 ## Contributing
 

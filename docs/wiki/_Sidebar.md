@@ -15,3 +15,4 @@
 - [Repository](https://github.com/BlackBenAI/saas-ui)
 - [README](https://github.com/BlackBenAI/saas-ui/blob/main/README.md)
 - [Issues](https://github.com/BlackBenAI/saas-ui/issues)
+- [Discord](https://discord.gg/GMtNYDevE)
